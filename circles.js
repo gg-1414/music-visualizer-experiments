@@ -51,26 +51,26 @@ window.onload = function() {
 
       ctx.fillStyle = "rgba(0,0,0,0.5)";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
-      one.style.border = '1px solid transparent'
-      two.style.border = '1px solid transparent'
-      three.style.border = '1px solid transparent'
-      four.style.border = '1px solid transparent'
-      five.style.border = '1px solid transparent'
+      one.style.border = '2px solid transparent'
+      two.style.border = '2px solid transparent'
+      three.style.border = '2px solid transparent'
+      four.style.border = '2px solid transparent'
+      five.style.border = '2px solid transparent'
 
       let bars = 118;
       let y = 2;
 
       for (let i = 0; i < bufferLength; i++) {
         if (dataArray[i] === 130) {
-          one.style.border = '1px solid red';
+          one.style.border = '2px solid red';
         } else if (dataArray[i] === 100) {
-          two.style.border = '1px solid yellow';
+          two.style.border = '2px solid yellow';
         } else if (dataArray[i] === 70) {
-          three.style.border = '1px solid pink';
+          three.style.border = '2px solid pink';
         } else if (dataArray[i] === 40) {
-          four.style.border = '1px solid blue';
+          four.style.border = '2px solid blue';
         } else if (dataArray[i] === 10) {
-          five.style.border = '1px solid purple';
+          five.style.border = '2px solid purple';
         }
 
       }

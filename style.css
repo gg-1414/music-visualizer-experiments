@@ -72,25 +72,25 @@ audio {
   margin: 45px;
   padding: 20px;
   border-radius: 30px;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 
 #one {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 #two {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 #three {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 #four {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 #five {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
