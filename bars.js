@@ -7,7 +7,6 @@ window.onload = function() {
 
   file.onchange = function() { // when the value of an element has been changed
     const files = this.files;
-    // debugger
 
     audio.src = URL.createObjectURL(files[0]); // represents the specified File object
     console.log('FILES[0]: ', files[0].name)
