@@ -1,0 +1,101 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEST</title>
+  <!-- <link rel="stylesheet" href="../style.css"> -->
+  <!-- <script src="../script.js"></script> -->
+  <script src="graph.js"></script>
+  <style>
+    #canvas {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 90%;
+      height: 80%;
+    }
+    .section {
+      width: 10%;
+      height: 100%;
+      float: left;
+    }
+    .zero {
+      background-color: rgb(0,0,250);
+    }
+    .one {
+      background-color: rgb(143,1,250);
+    }
+    .two {
+      background-color: rgb(157,2,250);
+    }
+    .three {
+      background-color: rgb(171,2,250);
+    }
+    .four {
+      background-color: rgb(170,3,250);
+    }
+    .five {
+      background-color: rgb(168,4,250);
+    }
+    .six {
+      background-color: rgb(170,5,250);
+    }
+  </style>
+
+  <script>
+    // bL = 64
+    // WIDTH = 1440, HEIGHT: 705
+    // bW = 348.75
+
+    // r = 0, 142.78, 156.56, 171.34 ,170, 168, 170
+    // g = 0, 0.78, 1.56, 2.34, 3, 4, 5
+    // b = 250;
+
+    let HEIGHT = 705
+    let barHeight = [121,142,155,169,167,164,165] // dataArray
+    let bufferLength = 8192
+
+    function fillRect(){
+      let x = 0
+      let y;
+      let barWidth = 348.75
+
+      for (let i = 0; i < barHeight.length; i++){
+        y = (HEIGHT - barHeight[i])
+        console.log(`fillRect: ${x}, ${y}, ${barWidth}, ${barHeight[i]}`)
+        x += barWidth + 1
+      }
+    }
+
+    function rgb(){
+      let r, g, b;
+
+      for (let i = 0; i < barHeight.length; i++){
+        r = barHeight[i] + (100000 * (i/bufferLength))
+        g = 50 * (i/bufferLength)
+        b = 250
+        console.log(`rgb(${r}, ${g}, ${b})`)
+      }
+    }
+
+    fillRect()
+    rgb()
+
+  </script>
+</head>
+<body>
+  <div id="content">
+    <div id="canvas">
+      <div class="section zero"></div>
+      <div class="section one"></div>
+      <div class="section two"></div>
+      <div class="section three"></div>
+      <div class="section four"></div>
+      <div class="section five"></div>
+      <div class="section six"></div>
+      <div class="section seven"></div>
+    </div>
+  </div>
+</body>
+</html>
